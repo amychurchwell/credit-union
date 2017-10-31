@@ -22,7 +22,19 @@
                 <input id="withdrawal" type="text" class="form-control" placeholder="Withdrawal">
                 <label>Deposit</label>
                 <input id="deposit" type="text" class="form-control" placeholder="Deposit">
-                <button type="submit" class="btn btn-dark">Submit</button>
+              </div>
+              <div class="form-group">
+                <div class="form-inline">
+                  <button type="submit" class="btn btn-dark">Submit</button>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" id="savings" name="account" value="savings">Savings</label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" id="checking" name="account" value="checking">Checking</label>
+                  </div>
+                </div>
               </div>
             </div>
           </form>
@@ -33,7 +45,8 @@
             <div class="card-header">User Account</div>
             <div class="card-body">
               <div class="alert alert-danger" role="alert">Your account is overdrawn!</div>
-              <span id = "result"></span>
+              <h5>Savings:</h5><span id = "result"></span>
+              <h5>Checking:</h5><span id = "result-checking"></span>
             </div>
           </div>
         </div>
