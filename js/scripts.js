@@ -30,7 +30,7 @@ $(document).ready(function() {
     var deposit = parseInt($('#deposit').val());
     var withdrawal = parseInt($('#withdrawal').val());
     var initial = parseInt($('#initial').val());
-debugger;
+
     if (isNaN(withdrawal)) {
       withdrawal = 0;
     }
@@ -41,9 +41,12 @@ debugger;
 
     var newMoney = new Money(deposit, withdrawal, initial);
 
+    $('#result-container').slideDown("slow");
+    $('#result').text("Your balance is: " + newMoney.credit() + ".");
 
-    $('#result').text("Your balance is: " + newMoney.credit() + "!");
-
+    if ((newMoney.credit()) < 0){
+      $('.alert-danger').slideDown("slow");
+    }
     event.preventDefault();
 
   });
