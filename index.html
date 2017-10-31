@@ -13,13 +13,19 @@
         <form id="form">
           <h1 class="display-3">Epicodus Credit Union</h1>
           <div class="form-row">
+            <div class="col-md-6">
+              <label>Initial Deposit</label>
+              <input id="initial" type="number" class="form-control" placeholder="initial deposit">
+            </div>
+          </div>
+          <div class="form-row">
             <div class="col">
               <label>Withdrawal</label>
-              <input type="number" class="form-control" placeholder="Withdrawal">
+              <input id="withdrawal" type="number" class="form-control" placeholder="Withdrawal">
             </div>
             <div class="col">
               <label>Deposit</label>
-              <input type="number" class="form-control" placeholder="Deposit">
+              <input id="deposit" type="number" class="form-control" placeholder="Deposit">
             </div>
           </div>
           <button type="submit" class="btn btn-dark">Submit</button>
@@ -28,7 +34,7 @@
       <div class="row">
         <div class="card">
           <div class="card-body">
-            <span id = "result">test</span>
+            <span id = "result"></span>
           </div>
         </div>
       </div>
